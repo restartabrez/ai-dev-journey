@@ -12,7 +12,7 @@
 ## 0002 | 2026-10-29 | SQLBolt Lesson 9
 - **Tried:**
  ```sql
- `SELECT title, year FROM movies
+ SELECT title, year FROM movies
  WHERE year % 2 = 0;
 ```
 - **Happened:** I did not know what `%` meant
