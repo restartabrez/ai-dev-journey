@@ -4,14 +4,14 @@
 -ORDER BY length_minutes ASC  
 -LIMIT 5;'    
 
-**Query 2: movies sorted by title**  
+**Query 2: movies sorted by title**    
 'SELECT title FROM movies
 -ORDER BY title ASC;'  
 
-**Query 3: movies from one year**
+**Query 3: movies from one year**  
 'SELECT title, year  
--FROM movies  
--WHERE year = 2004;'  
+FROM movies  
+WHERE year = 2004;'  
 
 ##**Date-29 October,2026**  
 **Query1: the title and rating of every movie that has box office data, best rating first.**
