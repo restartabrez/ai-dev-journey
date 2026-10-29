@@ -17,3 +17,7 @@
 - **Tried:** confusion in answering 
 - **Happened:** As each year has only one release in Movies table
 - **Lesson:** Use a range to see sorting.” That is a good real lesson: always test a query on data where the answer can be seen.
+## 0005 | 2026-10-29 | Inner Join vs Left Join 
+- **Tried:** Used INNER JOIN where the task said ‘including’ rows with no match 
+- **Happened:** Used INNER JOIN where the task said ‘including’ rows with no match
+- **Lesson:** including’ means LEFT JOIN
