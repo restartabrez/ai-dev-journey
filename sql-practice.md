@@ -14,7 +14,7 @@ SELECT title, year
 FROM movies
 WHERE year = 2004;
 
-<B>Date-29 October,2026/
+Date-29 October,2026
 Query1: the title and rating of every movie that has box office data, best rating first.
 
 select title,rating from movies
