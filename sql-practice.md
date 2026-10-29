@@ -27,9 +27,8 @@ order by rating desc*' ;
 left join boxoffice  
 on movies.id=boxoffice.movie_id;*'  
 
-**Query 3: only the movies that have no box office row.
-
--select title from movies
--left join boxoffice
--on movies.id=boxoffice.movie_id
--where movie_id is null;
+**Query 3: only the movies that have no box office row.**
+'*select title from movies  
+left join boxoffice  
+on movies.id=boxoffice.movie_id  
+where movie_id is null;*'  
