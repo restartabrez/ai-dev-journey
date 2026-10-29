@@ -2,7 +2,9 @@
 
 ## 0001 | 2026-10-29 | SQLBolt Lesson 9
 - **Tried:** calculate a rating percentage with a join
-  `SELECT title, (rating/10)*100 AS rating_percent FROM movies INNER JOIN boxoffice ON movies.id = boxoffice.movie_id;`
+  ```SELECT
+   title, (rating/10)*100 AS rating_percent FROM movies INNER JOIN boxoffice ON movies.id = boxoffice.movie_id;
+  ```
 - **Happened:** percentage formula was not clear
 - **Lesson:** (rating / 10) * 100 turns a score out of 10 into a percentage. Write the formula in plain maths first (for example 8.2 out of 10 is 82 percent), then translate it into SQL. AS rating_percent gives the new column a readable name.
 ## 0002 | 2026-10-29 | SQLBolt Lesson 9
