@@ -1,18 +1,18 @@
-##**Date-28 October,2026**
-**Query 1: the first 5 movies by length  
+##**Date-28 October,2026**  
+**Query 1: the first 5 movies by length**  
 
 -'SELECT title FROM movies
 -ORDER BY length_minutes ASC
 -LIMIT 5;'  
 **Query 2: movies sorted by title**  
 
-**SELECT title FROM movies
--ORDER BY title ASC;
--Query 3: movies from one year
+'SELECT title FROM movies
+-ORDER BY title ASC;'  
+**Query 3: movies from one year**
 
-**SELECT title, year
+'SELECT title, year
 -FROM movies
--WHERE year = 2004;
+-WHERE year = 2004;'
 
 ##Date-29 October,2026
 **Query1: the title and rating of every movie that has box office data, best rating first.
