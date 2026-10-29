@@ -3,7 +3,7 @@
 ```*SELECT title FROM movies  
 ORDER BY length_minutes ASC  
 LIMIT 5;*```   
-## Query 2: movies sorted by title    
+## **Query 2: movies sorted by title    
 ```*SELECT title FROM movies
 ORDER BY title ASC*;```  
 ## Query 3: movies from one year  
