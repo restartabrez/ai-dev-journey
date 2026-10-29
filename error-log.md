@@ -13,3 +13,7 @@
 - **Tried:** `WHERE country = "United States"`
 - **Happened:** it worked in SQLBolt
 - **Lesson:** in PostgreSQL (Supabase), text goes in single quotes, `'United States'`. Double quotes are for column and table names.
+## 0004 | 2026-10-29 | With one movie per year 
+- **Tried:** confusion in answering 
+- **Happened:** As each year has only one release in Movies table
+- **Lesson:** Use a range to see sorting.” That is a good real lesson: always test a query on data where the answer can be seen.
