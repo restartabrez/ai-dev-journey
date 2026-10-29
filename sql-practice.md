@@ -51,4 +51,4 @@ ON movies.id = boxoffice.movie_id
 WHERE boxoffice.movie_id IS NULL;
 ```
 
-**INNER JOIN keeps only rows that match in both tables, but LEFT JOIN keeps ___.**
+**INNER JOIN keeps only rows that match in both tables, but LEFT JOIN keeps all the data from left table.**
