@@ -1,10 +1,10 @@
 ## Date: 2/11/26
 **Python  
 
-##Exercise-1
+##Exercise-1  
 print(f"The house was a good size: 1200 square feet, or {1200 * 0.092903:.0f} meters squared!")
 
-##Exercise-2
+##Exercise-2  
 l=30  
 w=58  
 area=l*w  
