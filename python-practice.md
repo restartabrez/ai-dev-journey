@@ -12,7 +12,7 @@ print(f"""The area of my  house {l*w} feet squared!
 which is {area*0.0929} meter squared  
 """)
 
-##Exercise-3 
+##Exercise-3   
 name="abrez"  
 age=50   
 print_llm_response(f"""i am {name} who is {age} year old.  
