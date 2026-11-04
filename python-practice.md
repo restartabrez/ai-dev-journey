@@ -65,3 +65,65 @@ Enter total frames: 48
 PS D:\AI\github\Python> python 511.py
 Enter total frames: 23
 0 seconds 23 frames
+
+## Task 3: sharing chocolates
+
+## What you’re building: you enter a number of chocolates and a number of children. The program says how many each child gets and how many are left over.
+
+Part 1, two helpers:
+
+each_gets(chocolates, children) gives back how many whole chocolates each child gets.
+left_over(chocolates, children) gives back how many are left over.
+Neither one prints.
+
+Part 2, main:
+
+It asks for the chocolates, then the children.
+If the number of children is 0, it prints no children to share with and doesn’t call the helpers. Think about why: what happens when you divide by 0?
+Otherwise it prints two lines, as shown below.
+
+
+```python
+def main():
+    choclates = int(input("Enter chocolates: "))
+    children = int(input("Enter children: "))
+
+
+    if children == 0:
+        print("no children to share with")
+    else:
+        share = each_gets(choclates, children)
+        remaining = left_over(choclates, children)
+
+         
+        print("Each child gets:", share)
+        print("Left over:", remaining)
+
+
+def each_gets(choclates, children):
+    return choclates // children
+
+
+def left_over (choclates, children):
+    return choclates % children
+  
+
+main()
+
+```
+
+PS D:\AI\github\Python> python 511.py
+Enter chocolates: 17
+Enter children: 5
+Each child gets: 3
+Left over: 2
+PS D:\AI\github\Python> python 511.py
+Enter chocolates: 10
+Enter children: 5
+Each child gets: 2
+Left over: 0
+PS D:\AI\github\Python> python 511.py
+Enter chocolates: 7
+Enter children: 0
+no children to share with
+PS D:\AI\github\Python>
