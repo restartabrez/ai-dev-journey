@@ -127,3 +127,45 @@ Enter chocolates: 7
 Enter children: 0
 no children to share with
 PS D:\AI\github\Python>
+
+## What you’re building: a day checker that uses match.
+
+Part 1, a helper called day_type(day):
+
+"Saturday" or "Sunday" gives back weekend.
+"Monday" to "Friday" gives back weekday.
+Anything else gives back invalid.
+It uses match, not if, and has no print.
+
+Part 2, main: asks for the day, gets the answer back, and prints it.
+
+
+```python
+def main():
+    day = input("Enter the day: ")
+    result = day_type(day)
+    print(result)
+
+
+def day_type(day):
+    match day:
+        case "Monday" | "Tuesday" | "Wednesday" | "Thursday" | "Friday":
+            return "weekday"
+        case "Saturday" | "Sunday":
+            return "weekend"
+        case _:
+            return "invalid"
+
+
+main()
+```
+
+PS D:\AI\github\Python> python conditional.py
+Enter the day: Sunday
+weekend
+PS D:\AI\github\Python> python conditional.py
+Enter the day: Wednesday
+weekday
+PS D:\AI\github\Python> python conditional.py
+Enter the day: Funday
+invalid
