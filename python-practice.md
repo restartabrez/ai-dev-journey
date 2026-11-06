@@ -169,3 +169,55 @@ weekday
 PS D:\AI\github\Python> python conditional.py
 Enter the day: Funday
 invalid
+
+
+## Part 1, a helper called get_marks():
+
+It keeps asking Enter marks: until the number is from 0 to 100.
+It gives back the good number with return.
+It has no print.
+
+## Part 2, main():
+
+It asks how many subjects there are.
+It loops that many times, calling get_marks() each time and adding the result to the total.
+After the loop, it prints the total and the average.
+
+
+```python
+def main():
+
+    subjects = int(input("How many subjects: "))
+    total = 0
+
+    for _ in range(1, subjects+1):
+
+        marks = get_marks()
+        total = total + marks
+
+    average = total / subjects
+
+    print("Total:", total)
+    print("Average:", average)
+
+
+def get_marks():
+
+    while True:
+
+        marks = int(input("Enter marks: "))
+
+        if 0 <= marks <= 100:
+            return marks
+
+
+main()
+```
+
+How many subjects: 2
+Enter marks: 150
+Enter marks: 80
+Enter marks: -5
+Enter marks: 90
+Total: 170
+Average: 85.0
