@@ -1,24 +1,32 @@
 ## Date: 2/11/26
 **Python**  
 
-##Exercise-1  
-print(f"The house was a good size: 1200 square feet, or {1200 * 0.092903:.0f} meters squared!")
+## Exercise-1  
 
-##Exercise-2  
+```python
+
+print(f"The house was a good size: 1200 square feet, or {1200 * 0.092903:.0f} meters squared!")
+```
+## Exercise-2
+
+```python
 l=30  
 w=58  
 area=l*w  
 print(f"""The area of my  house {l*w} feet squared!  
 which is {area*0.0929} meter squared  
 """)
+```
+## Exercise-3
 
-##Exercise-3   
+```python
 name="abrez"  
 age=50   
 print_llm_response(f"""i am {name} who is {age} year old.  
 give me the ideal diet plan  
 
 """)
+````
 ## Task 2: frame-to-timecode converter (24 fps)
 
 ## What you’re building: you enter a number of frames, and the program tells you how many seconds and leftover frames that is.
