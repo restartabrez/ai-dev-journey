@@ -229,3 +229,41 @@ Enter marks: -5
 Enter marks: 90
 Total: 170
 Average: 85.0
+
+## This combines lists, a running total and a counter. It’s close to your gate’s “loop and list” item.
+
+New shortcut (optional): total += m means exactly the same as total = total + m.
+
+Inside main():
+
+Start an empty list called marks.
+Ask how many subjects there are, then loop that many times, appending each mark (as a whole number) to the list.
+Then loop over the list with for m in marks:, and inside that loop:
+add each mark to a total
+if the mark is 50 or more, add 1 to a passed counter
+After the loop, print 4 lines using f-strings.
+```python
+
+def main():
+    subjects = int(input("How many subjects: "))
+    marks = []
+    total = 0
+    passed = 0
+
+    for _ in range(1, subjects + 1):
+        number = int(input("Enter marks: "))
+        marks.append(number)
+
+    for num in marks:
+        total = total + num
+        if num >= 50:
+            passed = passed + 1
+
+    print(f"Marks: {marks}")
+    print(f"Total: {total}")
+    print(f"Average: {total / len(marks):.2f}")
+    print(f"Passed: {passed} of {len(marks)}")
+
+
+main()
+```
