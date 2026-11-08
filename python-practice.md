@@ -267,3 +267,45 @@ def main():
 
 main()
 ```
+
+## Exercise  — Understanding how to create a new dictionary
+The objective is to create a second dictionary containing only students who passed, without changing the original dictionary.
+
+```python
+students = {
+    "Amit": [85, 90, 78],
+    "Rahul": [32, 45, 38],
+    "Priya": [95, 92, 98],
+    "Neha": [68, 75, 70],
+    "Karan": [25, 35, 30]
+}
+
+passed_students = {}
+passed = 0
+failed = 0
+
+
+for student, marks in students.items():
+    total = sum(marks)
+    average = total / len(marks)
+
+    if average >= 40 :
+  
+        result = "Passed"
+        passed = passed + 1
+        passed_students[student] = average 
+
+    else:
+
+        result = "Failed"
+        failed = failed + 1
+
+
+    print(f"{student} - Total : {total}, Average: {average:.2f}, - {result}")
+
+print ("Total Passed:", passed)
+print ("Total Failed:", failed)
+print ()
+
+print(passed_students)
+```
