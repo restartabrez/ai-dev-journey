@@ -382,9 +382,57 @@ def main():
 main()    
 
 ```
-          
+## Exercise  — Student examination system
+Challenge
+This exercise is inspired by SARTHI.
+
+Write a program that:
+1. Imports random.
+2. Generates marks for five students (between 0 and 100).
+3. Stores the marks in a list.
+4. Calculates total and average marks.
+5. Identifies the highest and lowest marks.
+6. Counts how many students passed (50 or above).
+7. Displays all results.          
 
 
+```python
+
+import random
+
+student_marks=[]
+
+for i in range (5):
+    i = random.randint(1,100)
+    student_marks.append(i)    
+
+total = 0
+passed = 0
+failed = 0
+heighest = student_marks[0]
+lowest = student_marks[0]
+
+
+for mark in range (len(student_marks)):
+    total = total + student_marks[mark]
+    if student_marks[mark] >= 50:
+        passed = passed + 1
+    else:
+        failed = failed + 1   
+
+    if student_marks[mark] > heighest:
+        heighest = student_marks[mark]     
+    if student_marks[mark] < lowest:
+        lowest = student_marks[mark]    
+
+print(student_marks)
+print("Total:",total)
+print("Average",total / (len(student_marks)))
+print("Heighest:", heighest)
+print("lowest:",lowest)
+print("Passed:", passed)
+print("failed:",failed)
+```
         
 
 
