@@ -309,3 +309,82 @@ print ()
 
 print(passed_students)
 ```
+
+## Student marks system
+
+Write a program that:
+1. Asks how many subjects the student has.
+2. Takes marks for each subject.
+3. Stores marks in a list.
+4. Calculates total and average.
+5. Handles invalid input using exceptions.
+6. Does not allow the number of subjects to be zero or negative.
+7. Displays the final result only when the input is valid.
+Use functions if possible.
+
+```python
+
+def subject_count():
+
+    while True:
+        try:
+            subject = int(input("Enter the number of subjects: "))
+
+            if subject > 0:
+                return subject
+            
+            else:
+                print (" Number of subject has to be more than zero")
+
+        except ValueError:
+               
+            print("Invalid entry")
+
+def get_marks(subject):
+
+    marks = []
+
+    for i in range (subject):
+
+        while True:
+            try:
+                mark = float(input(f"Enter the marks for subject {i+1}: "))
+
+                if mark > 100 and mark <0:
+                    print ("Marks must be between o to 100")    
+
+                else :
+                    marks.append(mark)
+                    break
+
+            except ValueError:
+                print ("Invalid Entry, Please use the numbers")   
+
+    return marks
+     
+def calculate_res(marks):
+    total = sum(marks)
+    average = total / len(marks)
+
+    return total,average
+
+def main():
+    subjects = subject_count()
+    marks = get_marks(subjects)
+    total,average = calculate_res(marks)
+
+    print ("\n =========Student Result==========")
+    print("subject marks: ",marks)
+    print ("Total Marks: ",total)
+    print(f"average marks: {average:.2f}")
+
+
+main()    
+
+```
+          
+
+
+        
+
+
