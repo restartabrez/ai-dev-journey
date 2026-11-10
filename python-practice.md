@@ -433,6 +433,82 @@ print("lowest:",lowest)
 print("Passed:", passed)
 print("failed:",failed)
 ```
+
+## Student management system
+
+```python
+
+students = []
+i=0
+while i < 3:
+    name = input("Enter the name: ")
+
+    try:
+        marks = float(input("Enter the marks: "))
+
+        if marks > 100 or marks < 0:
+            print ("Enter the marks between 0 to 100")
+            continue
+
+
+    except ValueError:
+        print("Enter the numbers only.")
+        continue    
+
+    student = {"name":name,"marks":marks}
+
+    students.append(student)
+    i = i+1
+
+
+total = 0
+highest = students[0]["marks"]
+lowest = students[0]["marks"]
+passed = 0
+failed = 0
+
+for student in students:
+    total = total + student["marks"]
+    
+
+    if student["marks"] > highest:
+        highest = student["marks"]
+    if  student["marks"] < lowest:
+        lowest = student["marks"]  
+
+    if student["marks"] >= 50:
+        passed = passed + 1
+    else:
+        failed = failed + 1
+
+    if student["marks"] >= 90:
+        student["grade"] = "A"
+    elif student["marks"] >= 75:
+        student["grade"] = "B"    
+    elif student["marks"] >= 50:
+        student["grade"]= "C"  
+    else:
+        student["grade"]= "F"
+
+print("=============Student Report=============")
+print(f"{'Name':<15}{'Marks':<12}{'Grade'}")
+print("========================================")
+
+for student in students:
+
+    print(f"{student['name']:<15}{student['marks']:<12.0f}{student['grade']}")
+print("========================================")
+print()
+    
+
+print("total:", total)
+print(f"average: {(total / (len(students))):.2f}")  
+print("highest", highest)
+print("lowest", lowest)
+print("Passed",passed)
+print("Failed",failed)      
+```
+
         
 
 
